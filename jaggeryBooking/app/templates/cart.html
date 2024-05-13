@@ -1,0 +1,198 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row mt-5">
+        <div class="hr-lines"><span class="text-center fs-4 mb-4">Your cart Items</span></div>
+
+        <div class="col-3 offset-2 pt-4">
+            <div class="row ">
+                <div class="col-5">
+                    <img src="{% static 'images/products/IMG_4151.JPG' %}" class="border border-warning p-1"
+                        style="height: 100px; width: 100px;" alt="">
+                </div>
+                <div class="col-7">
+                    <span class="fs-5">Product Name</span> <br>
+                    <span style="font-size: 15px;">Lorem ipsum dolor sit amet.</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 offset-2 py-4">
+            <div class="row text-end">
+                <div class="col-12">
+                    <span class="px-2 bg-warning c-p decreement-btn">-</span> <span class="mx-3">Qty. <span class="counterDisplay"></span></span> <span
+                        class="c-p px-2 bg-warning increment-btn">+</span>
+                </div>
+                <div class="col-12 mt-4">
+                    Rs. <span class="CouterValue"></span>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-3 offset-2 py-4">
+            <div class="row ">
+                <div class="col-5">
+                    <img src="{% static 'images/products/IMG_4151.JPG' %}" class="border border-warning p-1"
+                        style="height: 100px; width: 100px;" alt="">
+                </div>
+                <div class="col-7">
+                    <span class="fs-5">Product Name</span> <br>
+                    <span style="font-size: 15px;">Lorem ipsum dolor sit amet.</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 offset-2 py-4">
+            <div class="row text-end">
+                <div class="col-12">
+                    <span class="px-2 bg-warning">-</span> <span class="mx-3">Qty. 1</span> <span
+                        class="px-2 bg-warning">+</span>
+                </div>
+                <div class="col-12 mt-4 ">
+                    Rs. 200
+                </div>
+            </div>
+        </div>
+        <div class="col-3 offset-2">
+            <div class="row">
+                <div class="col-5">
+                    <img src="{% static 'images/products/IMG_4151.JPG' %}" class="border border-warning p-1"
+                        style="height: 100px; width: 100px;" alt="">
+                </div>
+                <div class="col-7">
+                    <span class="fs-5">Product Name</span> <br>
+                    <span style="font-size: 15px;">Lorem ipsum dolor sit amet.</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 offset-2">
+            <div class="row text-end">
+                <div class="col-12">
+                    <span class="px-2 bg-warning">-</span> <span class="mx-3">Qty. 1</span> <span
+                        class="px-2 bg-warning">+</span>
+                </div>
+                <div class="col-12 mt-4">
+                    Rs. 200
+                </div>
+
+            </div>
+        </div>
+
+        <hr class="mt-3">
+        <div class="col-3 offset-2 ">
+            <span class="fw-bold text-success">Total Amount to be Paid</span>
+        </div>
+        <div class="col-3 offset-2 text-end">
+            Rs. 600
+        </div>
+
+
+        <div class="col-3 offset-2">
+        </div>
+        <div class="col-3 offset-2 py-4 ps-5 text-end">
+            <button class="btn btn-warning ms-5" data-bs-toggle="modal" data-bs-target="#exampleModal">Checkout</button>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Payment Mode</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-10">
+                        1. Credit Card
+                    </div>
+                    <div class="col-2">
+                        <input type="radio" name="c-c" id="">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-10">
+                        2. Debit Card
+                    </div>
+                    <div class="col-2">
+                        <input type="radio" name="d-c" id="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10">
+                        3. UPI
+                    </div>
+                    <div class="col-2">
+                        <input type="radio" name="upi" id="">
+                    </div>
+                </div>
+                <div class="row my-3">
+                    <div class="col-10">
+                        4. Cash on Delivery
+                    </div>
+                    <div class="col-2">
+                        <input type="radio" name="cod" id="">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // var $button = $('.increment-btn');
+    // var $counter = $('.counter');
+    // var value = 1
+
+    // $button.click(function () {
+    //     value = $counter.val(parseInt($counter.val()) + 1); // `parseInt` converts the `value` from a string to a number
+    //     console.log(value);
+    // });
+
+
+    $(document).ready(function(){
+        var counter = 1;
+        var amtValue = 200;
+        $('.counterDisplay').text(1);
+        $('.CouterValue').text(200);
+        
+
+        // Function to increment the counter and update the HTML
+        function incrementCounter() {
+            counter++;
+            $('.counterDisplay').text(counter);
+            $('.CouterValue').text(amtValue * counter);
+
+        }
+
+        function decreementCounter() {
+            if(counter <= 1){
+                counter = 1
+            }else{
+                counter--;
+            }
+            $('.counterDisplay').text(counter);
+            $('.CouterValue').text(amtValue * counter);
+
+        }
+
+        // Event listener for the button click
+        $('.increment-btn').click(function(){
+            incrementCounter();
+        });
+
+        $('.decreement-btn').click(function(){
+            decreementCounter();
+        });
+    });
+</script>
+{% endblock content %}

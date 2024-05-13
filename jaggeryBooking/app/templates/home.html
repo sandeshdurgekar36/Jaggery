@@ -1,0 +1,365 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-9 mt-5">
+            <div class="row">
+                <div class="col-12">
+                    <h4 class="fs-3">Welcome to Shantikaparameshwari Aalemane Jaggery</h4>
+                    <span>Manufacturers of Pure and Organic Jaggery / Gur and Jaggery products.</span>
+
+                    <p style="color: grey;" class="mt-4">Our Jaggery Products such as Jaggry powder, Organic jaggery are
+                        known for its pure and natural contents. We are one of the prime Indian jaggery suppliers from
+                        India. Our jaggery adds traditional Indian taste to your foods.</p>
+
+                    <span class="mt-3">HOW WE PROCESS ?</span>
+
+                    <div class="row mt-3">
+                        <div class="col-6 d-flex">
+                            <div class="steps text-center">1</div>
+                            <span class="mx-4 mt-2">Lorem ipsum Lorem ipsum dolor sit amet.</span>
+
+                        </div>
+                        <div class="col-6 d-flex">
+                            <div class="steps text-center">2</div>
+                            <span class="mx-4 mt-2">Lorem ipsum Lorem ipsum dolor sit amet.</span>
+                        </div>
+                        <div class="col-6 d-flex my-5">
+                            <div class="steps text-center ">3</div>
+                            <span class="mx-4 mt-2">Lorem ipsum Lorem ipsum dolor sit amet.</span>
+                        </div>
+                        <div class="col-6 d-flex my-5">
+                            <div class="steps text-center">4</div>
+                            <span class="mx-4 mt-2">Lorem ipsum Lorem ipsum dolor sit amet.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-3">
+            <img src="{% static 'images/jaggery1.png' %}" style="height: 30rem !important;" alt="">
+        </div>
+    </div>
+</div>
+
+<div class="bg-clr py-5">
+    <div class="container my-5">
+        <h4 class="fs-3">YOU CAN BOOK YOUR SLOTS HERE</h4>
+
+        <!-- <form action="" id="slot-form"> -->
+        <div class="row pt-4">
+            <!-- {{calneder | safe }} -->
+            <div class="col-3">
+                <span>Check The Available Date </span>
+            </div>
+            <div class="col-3">
+                <select name="" id="selected-value" class="form-select">
+                    <option value="">Select Slots</option>
+                    {% for i in available_slots %}
+                    <option value="{{i.id}}">{{i.slots_date_time}}</option>
+                    {% endfor %}
+                </select>
+                <span class="text-danger p-1 slot-error">Please select slots</span>
+            </div>
+            <div class="col-3">
+                <button class=" border-warning p-1 px-3 w-100 rounded book-slots">Book Now</button>
+            </div>
+        </div>
+        <!-- </form> -->
+
+    </div>
+</div>
+
+<div class="my-3">
+    <div class="container py-4">
+        <div class="row">
+            <h4 class="text-start fs-3 mb-5">OUR BESTSELLER</h4>
+            <div class="col-2">
+                <img src="{% static 'images/products/IMG_4139.JPG' %}" class="border border-warning p-1"
+                    style="height: 200px; width: 200px;" alt="">
+                <div class="pt-2 text-center">
+                    <span class="product-color text-center fs-5">Aramane Jaggery</span> <br>
+                    <span class="fs-4">Rs. 340</span><br>
+                    <s>Rs. 390</s>
+                </div>
+
+                <button class="add-to-cart-button mt-3 add-to-cart">Add To Cart</button>
+
+            </div>
+            <div class="col-2">
+                <img src="{% static 'images/products/IMG_4144.JPG' %}" class="border border-warning p-1"
+                    style="height: 200px; width: 200px;" alt="">
+                <div class="pt-2 text-center">
+                    <span class="product-color text-center fs-5">Aramane Jaggery</span> <br>
+                    <span class="fs-4">Rs. 340</span><br>
+                    <s>Rs. 390</s>
+                </div>
+
+                <button class="add-to-cart-button mt-3">Add To Cart</button>
+            </div>
+            <div class="col-2">
+                <img src="{% static 'images/products/IMG_4146.JPG' %}" class="border border-warning p-1"
+                    style="height: 200px; width: 200px;" alt="">
+                <div class="pt-2 text-center">
+                    <span class="product-color text-center fs-5">Aramane Jaggery</span> <br>
+                    <span class="fs-4">Rs. 340</span><br>
+                    <s>Rs. 390</s>
+                </div>
+
+                <button class="add-to-cart-button mt-3">Add To Cart</button>
+            </div>
+            <div class="col-2">
+                <img src="{% static 'images/products/IMG_4147.JPG' %}" class="border border-warning p-1"
+                    style="height: 200px; width: 200px;" alt="">
+                <div class="pt-2 text-center">
+                    <span class="product-color text-center fs-5">Aramane Jaggery</span> <br>
+                    <span class="fs-4">Rs. 340</span><br>
+                    <s>Rs. 390</s>
+                </div>
+
+                <button class="add-to-cart-button mt-3">Add To Cart</button>
+            </div>
+            <div class="col-2">
+                <img src="{% static 'images/products/IMG_4151.JPG' %}" class="border border-warning p-1"
+                    style="height: 200px; width: 200px;" alt="">
+                <div class="pt-2 text-center">
+                    <span class="product-color text-center fs-5">Aramane Jaggery</span> <br>
+                    <span class="fs-4">Rs. 340</span><br>
+                    <s>Rs. 390</s>
+                </div>
+
+                <button class="add-to-cart-button mt-3">Add To Cart</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="bg-light ">
+    <div class="container pt-5 ">
+        <h4 class="fs-3 text-center">CONTACT US</h4>
+
+        <form action="" class="mt-4">
+            <div class="row justify-content-center">
+                <div class="col-6">
+                    <div class="row my-4">
+                        <div class="col-6">
+                            <label for="">Full Name *</label>
+                            <input type="text" class="form-control" name="" id="">
+                        </div>
+                        <div class="col-6">
+                            <label for="">Email *</label>
+                            <input type="text" class="form-control" name="" id="">
+                        </div>
+                        <div class="col-6 my-4">
+                            <label for="">Phone Number *</label>
+                            <input type="text" class="form-control" name="" id="">
+                        </div>
+                        <div class="col-6 my-4">
+                            <label for="">Address *</label>
+                            <input type="text" class="form-control" name="" id="">
+                        </div>
+                        <div class="col-12">
+                            <label for="">Message *</label>
+                            <textarea name="" class="form-control" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+
+                    <button class="add-to-cart-button mt-3 border-warning">SUBMIT</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Login Here</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" name="" id="">
+
+                    <label for="" class="mt-2">Password</label>
+                    <input type="password" class="form-control" name="" id="">
+
+                    <input type="submit" class="btn btn-warning mt-3 w-100" name="" id="">
+                </form>
+                <div class="text-start my-3">
+                    Don't Have an Account <span class="text-primary c-p register"><u>Register</u></span> here
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h1 class="modal-title fs-5 text-center text-success fw-bold" id="exampleModalLabel">Success</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center p-5">
+                Thanks for Booking Slots with us <br>
+                will contact you soon
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="RegisterModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Register Here</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="resMessageParent">
+                <span id="resMessage"></span>
+            </div>
+            <div class="modal-body">
+                <form action="" id="registerForm">
+                    {% csrf_token %}
+                    <label for="">Full Name</label>
+                    <input type="text" class="form-control" id="full_name" id="">
+                    <label for="" class="mt-2">Email</label>
+                    <input type="text" class="form-control" id="email" id="">
+                    <label for="" class="mt-2">Phone Number</label>
+                    <input type="text" class="form-control" id="phone_number" id="">
+                    <label for="" class="mt-2">Password</label>
+                    <input type="password" class="form-control" id="password" id="">
+                    <label for="" class="mt-2">Address</label>
+                    <textarea name="" class="form-control" id="address" cols="30" rows="10"></textarea>
+
+                    <input type="submit" class="btn btn-warning mt-3 w-100" name="" id="submitBtn">
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $(".slot-error").hide();
+
+        $('.book-slots').click(function () {
+            var selected_value = document.getElementById('selected-value')
+            var user_id = localStorage.getItem("user_id")
+            var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+
+            if (selected_value.value == "") {
+                $(".slot-error").show();
+            } else {
+                $(".slot-error").hide();
+                if (localStorage.getItem('userEmail') == "" | localStorage.getItem('userEmail') == null) {
+                    $("#exampleModal").modal("show");
+                } else {
+                    $('#successModal').modal("show")
+
+                    console.log(selected_value.value, user_id)
+
+                    $.ajax({
+                        type: 'POST',
+                        url: '{% url "book-slots" %}',
+                        data: {
+                            csrfmiddlewaretoken: csrfToken,
+                            user_id: localStorage.getItem('user_id'),
+                            slot_id: selected_value.value
+                        },
+                        success: function (response) {
+                            setTimeout(() => {
+                                location.reload()
+                            }, 1000);
+                        },
+                        error: function (xhr, errmsg, err) {
+                            console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+                            // Handle error response
+                        }
+                    });
+
+
+                }
+            }
+
+
+        });
+
+        $('.add-to-cart').click(function () {
+            if (localStorage.getItem('userEmail') == "" | localStorage.getItem('userEmail') == null) {
+                $("#exampleModal").modal("show");
+            } else {
+                location.href('/cart')
+            }
+        });
+
+        $('.register').click(function () {
+            $("#exampleModal").modal("hide");
+            $("#RegisterModal").modal("show");
+
+        });
+
+
+
+
+        $('#submitBtn').click(function (event) {
+            $(".resMessageParent").addClass("");
+            event.preventDefault(); // Prevent form submission
+            var csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+            // Get form values
+            var fullName = $('#full_name').val();
+            var email = $('#email').val();
+            var phoneNumber = $('#phone_number').val();
+            var password = $('#password').val();
+            var address = $('#address').val();
+
+            $.ajax({
+                type: 'POST',
+                url: '{% url "register" %}',
+                data: {
+                    csrfmiddlewaretoken: csrfToken,
+                    full_name: fullName,
+                    email: email,
+                    phone_number: phoneNumber,
+                    password: password,
+                    address: address
+                },
+                success: function (response) {
+                    console.log(response);
+                    localStorage.setItem("userEmail", email)
+                    localStorage.setItem("user_id", response.user_id)
+                    $(".resMessageParent").addClass("p-3 bg-success mx-3 rounded text-white");
+                    $('#resMessage').text(response.message);
+                    $("#RegisterModal").modal("show");
+                    setTimeout(() => {
+                        $("#RegisterModal").modal("hide");
+
+                        setTimeout(() => {
+                            location.reload()
+                        }, 1000);
+                    }, 2000);
+
+
+
+                    // Handle success response
+                },
+                error: function (xhr, errmsg, err) {
+                    console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+                    // Handle error response
+                }
+            });
+        });
+    })
+</script>
+
+{% endblock content %}

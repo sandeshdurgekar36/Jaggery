@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.g-font{
+    font-family: "Poppins", sans-serif;
+}
+
+
+.bg-colr{
+    /* background-color: rgb(132, 0, 255); */
+    /* background-image: linear-gradient(rgb(132, 0, 255), rgb(167, 74, 255)); */
+    background-color: #916242;
+
+    color: white;
+}
+
+.img-logo{
+    height: 150px !important;
+}
+
+.shape-1{
+    clip-path: polygon(100% 0, 100% 48%, 100% 100%, 0 100%, 0 100%, 8% 0);
+
+}
+
+.timer-image{
+    height: 50px;
+}
+
+.nv-border{
+    border-radius: 10px;
+    padding: 20px !important;
+}
+
+.con{
+    position: relative;
+  text-align: center;
+  color: white;
+}
+
+.top-left{
+    position: absolute;
+    top: 15rem;
+    left: 20rem;
+}
+
+.button{
+    background-color: #f7c200;
+    width: 20%;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.product-color{
+    color: #a98400 !important;
+}
+
+.white-line {
+    border-top: 2px solid white;
+}
+
+.steps{
+    background-color: #f7c200;
+    width: 10%;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.add-to-cart-button{
+    background-color: #f7c200;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    border-color: #f7c200;
+    font-size: 15px;
+}
+
+.bg-clr{
+    background-color: #f7c200 !important;
+}
+
+.hr-lines{
+    width: 100%; 
+   text-align: center; 
+   border-bottom: 1px solid #000; 
+   line-height: 0.1em;
+   margin: 10px 0 20px; 
+}
+
+.hr-lines span{
+    background:#fff; 
+    padding:0 10px; 
+}
+.modal-header{
+    border-bottom: none;
+}
+.modal-footer{
+    border: none;
+}
+.c-p{
+    cursor: pointer;
+}
